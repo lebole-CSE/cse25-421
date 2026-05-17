@@ -1,197 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources – SciBrilliance IGCSE</title>
-  <meta name="description" content="Download IGCSE Chemistry, Biology, and Physics revision notes, past paper questions, and study guides from SciBrilliance." />
+  <meta name="description"
+    content="Download IGCSE Chemistry, Biology, and Physics revision notes, past paper questions, and study guides from SciBrilliance." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <style>
     /* Root and Base Styles */
-    :root{--navy:#0b1f3a;--navy2:#112d54;--teal:#0e8a8a;--teal-lt:#19b8b8;--gold:#d4a843;--gold-lt:#f0c96a;--cream:#f6f3ee;--white:#fff;--text:#1a2535;--muted:#5e6e82;--border:rgba(0,0,0,.09);--chem:#1b6e3a;--bio:#1250a0;--phys:#6b1f9b}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.6}
-    h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
-    .skip-link{position:absolute;top:-120px;left:1rem;background:var(--gold);color:var(--navy);padding:.5rem 1.2rem;border-radius:4px;font-weight:600;z-index:9999;transition:top .2s;text-decoration:none}.skip-link:focus{top:1rem}
+    :root {
+      --navy: #0b1f3a;
+      --navy2: #112d54;
+      --teal: #0e8a8a;
+      --teal-lt: #19b8b8;
+      --gold: #d4a843;
+      --gold-lt: #f0c96a;
+      --cream: #f6f3ee;
+      --white: #fff;
+      --text: #1a2535;
+      --muted: #5e6e82;
+      --border: rgba(0, 0, 0, .09);
+      --chem: #1b6e3a;
+      --bio: #1250a0;
+      --phys: #6b1f9b
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', serif
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -120px;
+      left: 1rem;
+      background: var(--gold);
+      color: var(--navy);
+      padding: .5rem 1.2rem;
+      border-radius: 4px;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top .2s;
+      text-decoration: none
+    }
+
+    .skip-link:focus {
+      top: 1rem
+    }
 
     /* Navigation */
-    .navbar{background:var(--navy);padding:0;min-height:62px;box-shadow:0 2px 16px rgba(0,0,0,.3)}
-    .navbar-brand{padding:.85rem 0;text-decoration:none;display:flex;flex-direction:column;line-height:1}
-    .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;color:var(--white)}.brand-name span{color:var(--gold)}
-    .brand-tag{font-family:'DM Sans',sans-serif;font-size:.58rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.18em;margin-top:2px}
-    .navbar-nav .nav-link{color:rgba(255,255,255,.78)!important;font-size:.88rem;padding:1.15rem .9rem!important;border-bottom:2px solid transparent;transition:all .2s}
-    .navbar-nav .nav-link:hover,.navbar-nav .nav-link.active{color:var(--gold)!important;border-bottom-color:var(--gold)}
-    .btn-login-nav{background:var(--gold)!important;color:var(--navy)!important;border-radius:4px;font-weight:600;padding:.42rem 1.2rem!important;font-size:.88rem!important;border:none}
+    .navbar {
+      background: var(--navy);
+      padding: 0;
+      min-height: 62px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, .3)
+    }
+
+    .navbar-brand {
+      padding: .85rem 0;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--white)
+    }
+
+    .brand-name span {
+      color: var(--gold)
+    }
+
+    .brand-tag {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .58rem;
+      color: rgba(255, 255, 255, .45);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      margin-top: 2px
+    }
+
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, .78) !important;
+      font-size: .88rem;
+      padding: 1.15rem .9rem !important;
+      border-bottom: 2px solid transparent;
+      transition: all .2s
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--gold) !important;
+      border-bottom-color: var(--gold)
+    }
+
+    .btn-login-nav {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      border-radius: 4px;
+      font-weight: 600;
+      padding: .42rem 1.2rem !important;
+      font-size: .88rem !important;
+      border: none
+    }
 
     /* Hero Banner */
-    .page-banner{background:var(--navy);padding:2.75rem 0;position:relative;overflow:hidden;color:var(--white)}
-    .page-banner h1{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:.4rem}
-    .breadcrumb-wrap{font-size:.82rem;margin-bottom:.9rem}
-    .breadcrumb-wrap a{color:var(--gold);text-decoration:none}
+    .page-banner {
+      background: var(--navy);
+      padding: 2.75rem 0;
+      position: relative;
+      overflow: hidden;
+      color: var(--white)
+    }
+
+    .page-banner h1 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      margin-bottom: .4rem
+    }
+
+    .breadcrumb-wrap {
+      font-size: .82rem;
+      margin-bottom: .9rem
+    }
+
+    .breadcrumb-wrap a {
+      color: var(--gold);
+      text-decoration: none
+    }
 
     /* Filters */
-    .filter-bar{background:var(--cream);border-bottom:1px solid var(--border);padding:.65rem 0;position:sticky;top:62px;z-index:100}
-    .fbtn{padding:.42rem 1.1rem;border:1.5px solid rgba(0,0,0,.14);border-radius:20px;background:transparent;font-size:.84rem;color:var(--muted);cursor:pointer;transition:all .2s}
-    .fbtn.active{background:var(--teal);border-color:var(--teal);color:var(--white)}
+    .filter-bar {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: .65rem 0;
+      position: sticky;
+      top: 62px;
+      z-index: 100
+    }
+
+    .fbtn {
+      padding: .42rem 1.1rem;
+      border: 1.5px solid rgba(0, 0, 0, .14);
+      border-radius: 20px;
+      background: transparent;
+      font-size: .84rem;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all .2s
+    }
+
+    .fbtn.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: var(--white)
+    }
 
     /* Resource Cards */
-    .res-section{padding:3.5rem 0}
-    .res-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.4rem;height:100%;transition:all .22s;display:flex;flex-direction:column}
-    .res-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.1);transform:translateY(-3px)}
-    .rc-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--white);margin-bottom:1rem}
-    .rc-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;color:var(--navy)}
-    .rtag{font-size:.7rem;padding:.18rem .55rem;border-radius:10px;font-weight:600;margin-right:4px}
-    .rtag-pdf{background:rgba(183,28,28,.09);color:#b71c1c}
-    
-    .btn-dl{display:inline-flex;align-items:center;gap:.45rem;padding:.5rem 1.1rem;border-radius:6px;font-weight:600;font-size:.86rem;text-decoration:none;border:1.5px solid;background:transparent;margin-top:auto}
-    .bd-chem{border-color:var(--chem);color:var(--chem)}.bd-chem:hover{background:var(--chem);color:white}
-    .bd-bio{border-color:var(--bio);color:var(--bio)}.bd-bio:hover{background:var(--bio);color:white}
-    .bd-phys{border-color:var(--phys);color:var(--phys)}.bd-phys:hover{background:var(--phys);color:white}
+    .res-section {
+      padding: 3.5rem 0
+    }
+
+    .res-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      height: 100%;
+      transition: all .22s;
+      display: flex;
+      flex-direction: column
+    }
+
+    .res-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+      transform: translateY(-3px)
+    }
+
+    .rc-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      margin-bottom: 1rem
+    }
+
+    .rc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy)
+    }
+
+    .rtag {
+      font-size: .7rem;
+      padding: .18rem .55rem;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-right: 4px
+    }
+
+    .rtag-pdf {
+      background: rgba(183, 28, 28, .09);
+      color: #b71c1c
+    }
+
+    .btn-dl {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .5rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: .86rem;
+      text-decoration: none;
+      border: 1.5px solid;
+      background: transparent;
+      margin-top: auto
+    }
+
+    .bd-chem {
+      border-color: var(--chem);
+      color: var(--chem)
+    }
+
+    .bd-chem:hover {
+      background: var(--chem);
+      color: white
+    }
+
+    .bd-bio {
+      border-color: var(--bio);
+      color: var(--bio)
+    }
+
+    .bd-bio:hover {
+      background: var(--bio);
+      color: white
+    }
+
+    .bd-phys {
+      border-color: var(--phys);
+      color: var(--phys)
+    }
+
+    .bd-phys:hover {
+      background: var(--phys);
+      color: white
+    }
 
     /* Toast */
-    .dl-toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--navy);color:white;padding:.75rem 1.25rem;border-radius:8px;display:none;z-index:9999;border-left:4px solid var(--gold)}
-    
-    footer{background:#07162a;color:rgba(255,255,255,.6);padding:3rem 0 1.5rem}
+    .dl-toast {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--navy);
+      color: white;
+      padding: .75rem 1.25rem;
+      border-radius: 8px;
+      display: none;
+      z-index: 9999;
+      border-left: 4px solid var(--gold)
+    }
+
+    footer {
+      background: #07162a;
+      color: rgba(255, 255, 255, .6);
+      padding: 3rem 0 1.5rem
+    }
   </style>
 </head>
+
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
-  <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <span class="brand-name">Sci<span>Brilliance</span></span>
-        <span class="brand-tag">IGCSE Science Platform</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="resources.html">Resources</a></li>
-          <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
-           <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
-        <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
-          <li class="nav-item ms-lg-3">
-            <button class="btn-login-nav nav-link" id="auth-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-              <i class="fa fa-user me-1"></i>Log In
-            </button>
-          </li>
-        </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-name">Sci<span>Brilliance</span></span>
+          <span class="brand-tag">IGCSE Science Platform</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+          aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="resources.html">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
+            <li class="nav-item"><a class="nav-link" href="Feedback.html">Feedback</a></li>
+            <li class="nav-item ms-lg-3">
+              <button class="btn-login-nav nav-link" id="auth-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <i class="fa fa-user me-1"></i>Log In
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <div class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> <span class="text-white-50"> / Resources</span>
+        </nav>
+        <h1>Learning Resources</h1>
+        <p class="opacity-75">Topic-mapped revision notes and guides for Cambridge IGCSE Sciences.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="filter-bar" role="navigation" aria-label="Resource filters">
+    <div class="container d-flex gap-2">
+      <button class="fbtn active" onclick="filterRes('all',this)">All</button>
+      <button class="fbtn" onclick="filterRes('chem',this)">Chemistry</button>
+      <button class="fbtn" onclick="filterRes('bio',this)">Biology</button>
+      <button class="fbtn" onclick="filterRes('phys',this)">Physics</button>
     </div>
   </nav>
 
-  <div class="page-banner">
-    <div class="container">
-      <nav class="breadcrumb-wrap" aria-label="Breadcrumb">
-        <a href="index.html">Home</a> <span class="text-white-50"> / Resources</span>
-      </nav>
-      <h1>Learning Resources</h1>
-      <p class="opacity-75">Topic-mapped revision notes and guides for Cambridge IGCSE Sciences.</p>
-    </div>
-  </div>
-</header>
-
-<nav class="filter-bar" role="navigation" aria-label="Resource filters">
-  <div class="container d-flex gap-2">
-    <button class="fbtn active" onclick="filterRes('all',this)">All</button>
-    <button class="fbtn" onclick="filterRes('chem',this)">Chemistry</button>
-    <button class="fbtn" onclick="filterRes('bio',this)">Biology</button>
-    <button class="fbtn" onclick="filterRes('phys',this)">Physics</button>
-  </div>
-</nav>
-
-<main id="main-content">
-  <aside class="container mt-4">
-    <div class="alert alert-info border-0 d-flex gap-3" style="background: rgba(14,138,138,0.1)">
-      <i class="fa fa-circle-info mt-1 text-teal"></i>
-      <div>
-        <h4 class="h6 fw-bold mb-1">About Downloads</h4>
-        <p class="small mb-0">All notes are provided in **PDF format**. Click the download button to save the revision guide to your device for offline study.</p>
+  <main id="main-content">
+    <aside class="container mt-4">
+      <div class="alert alert-info border-0 d-flex gap-3" style="background: rgba(14,138,138,0.1)">
+        <i class="fa fa-circle-info mt-1 text-teal"></i>
+        <div>
+          <h4 class="h6 fw-bold mb-1">About Downloads</h4>
+          <p class="small mb-0">All notes are provided in **PDF format**. Click the download button to save the revision
+            guide to your device for offline study.</p>
+        </div>
       </div>
-    </div>
-  </aside>
+    </aside>
 
-  <section id="chem-notes" class="res-section" data-subject="chem">
-    <div class="container">
-      <h2 class="h3 mb-4">Chemistry Revision Notes</h2>
-      <div class="row g-3" id="chem-res-grid"></div>
-    </div>
-  </section>
+    <section id="chem-notes" class="res-section" data-subject="chem">
+      <div class="container">
+        <h2 class="h3 mb-4">Chemistry Revision Notes</h2>
+        <div class="row g-3" id="chem-res-grid"></div>
+      </div>
+    </section>
 
-  <section id="bio-notes" class="res-section" data-subject="bio">
-    <div class="container">
-      <h2 class="h3 mb-4">Biology Revision Notes</h2>
-      <div class="row g-3" id="bio-res-grid"></div>
-    </div>
-  </section>
+    <section id="bio-notes" class="res-section" data-subject="bio">
+      <div class="container">
+        <h2 class="h3 mb-4">Biology Revision Notes</h2>
+        <div class="row g-3" id="bio-res-grid"></div>
+      </div>
+    </section>
 
-  <section id="phys-notes" class="res-section" data-subject="phys">
-    <div class="container">
-      <h2 class="h3 mb-4">Physics Revision Notes</h2>
-      <div class="row g-3" id="phys-res-grid"></div>
-    </div>
-  </section>
-</main>
+    <section id="phys-notes" class="res-section" data-subject="phys">
+      <div class="container">
+        <h2 class="h3 mb-4">Physics Revision Notes</h2>
+        <div class="row g-3" id="phys-res-grid"></div>
+      </div>
+    </section>
+  </main>
 
-<footer role="contentinfo">
-  <div class="container text-center">
-    <div class="foot-brand">Sci<span>Brilliance</span></div>
-    <p class="small opacity-50 mt-2">© 2026 SciBrilliance. All rights reserved.</p>
+  <footer role="contentinfo">
+    <div class="container text-center">
+      <div class="foot-brand">Sci<span>Brilliance</span></div>
+      <p class="small opacity-50 mt-2">© 2026 SciBrilliance. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="dl-toast" id="dl-toast" role="status">
+    <i class="fa fa-check-circle me-2"></i> <span id="dl-toast-msg"></span>
   </div>
-</footer>
 
-<div class="dl-toast" id="dl-toast" role="status">
-  <i class="fa fa-check-circle me-2"></i> <span id="dl-toast-msg"></span>
-</div>
+  <script>
+    const RES_DATA = {
+      chem: [
+        { t: 'States of Matter', d: 'Kinetic particle theory, changes of state, diffusion and gas laws.', p: '8', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/1-States-of-Matter/Detailed/1.1%20Solids%2C%20liquids%20and%20gases.pdf' },
+        { t: 'Atomic Structure', d: 'Protons, neutrons, electrons, isotopes and the Periodic Table.', p: '12', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/2-Atoms-Elements-and-Compounds/Detailed/2.2%20Atomic%20structure%20and%20the%20Periodic%20Table%20.pdf' },
+        { t: 'Stoichiometry', d: 'Chemical equations, mole concept, empirical formulae and yield.', p: '10', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/3-Stoichiometry/Detailed/3.1%20Formulae.pdf' },
+        { t: 'Organic Chemistry', d: 'Alkanes, Alkenes, Alcohols, carboxylic acids and polymerisation.', p: '16', url: 'https://henniscience.weebly.com/uploads/1/2/0/8/12088969/c14_organic_chemistry.pdf' },
+        { t: 'Chemical Energetics', d: 'Exothermic and endothermic reactions, bond energies and activation energy.', p: '9', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/5-Chemical-Energetics/Detailed/5.1%20Exothermic%20and%20endothermic%20reactions.pdf' },
+        { t: 'Acids, Bases & Salts', d: 'pH scale, reactions of acids, neutralisation and preparation of salts.', p: '11', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/7-Acids-Bases-and-Salts/Detailed/7.1%20The%20characteristic%20properties%20of%20acids%20and%20bases.pdf' }
+      ],
+      bio: [
+        { t: 'Characteristics of Life', d: 'MRS GREN life processes, classification and binomial nomenclature.', p: '7', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/1-Characteristics-and-Classification-of-Living-Organisms/Definitions%20-%20Topic%201%20Characteristics%20and%20classification%20of%20living%20organisms%20-%20CAIE%20Biology%20IGCSE.pdf' },
+        { t: 'Cells & Organisation', d: 'Plant vs animal cells, prokaryotes, specialised cells and organisation.', p: '10', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/2-Organisation-of-the-Organism/Summary%20Notes%20-%20Topic%202%20Organisation%20of%20the%20Organism%20-%20CAIE%20Biology%20IGCSE.pdf' },
+        { t: 'Biological Molecules', d: 'Carbohydrates, proteins, lipids, food tests and DNA base pairing.', p: '14', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/4-Biological-Molecules/Summary%20Notes%20-%20Topic%204%20Biological%20Molecules%20-%20CAIE%20Biology%20IGCSE.pdf' },
+        { t: 'Nutrition & Digestion', d: 'Nutrients, digestive system, enzyme action and photosynthesis.', p: '14', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/7-Human-Nutrition/Definitions%20-%20Topic%207%20Human%20nutrition%20-%20CAIE%20Biology%20IGCSE.pdf' },
+        { t: 'Respiration', d: 'Aerobic and anaerobic respiration, gas exchange and breathing.', p: '9', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/12-Respiration/Summary%20Notes%20-%20Topic%2012%20Respiration%20-%20CAIE%20Biology%20IGCSE.pdf' },
+        { t: 'Reproduction & Genetics', d: 'Mitosis, meiosis, Mendelian genetics, mutations and natural selection.', p: '16', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/16-Reproduction/Definitions%20-%20Topic%2016%20Reproduction%20-%20CAIE%20Biology%20IGCSE.pdf' }
+      ],
+      phys: [
+        { t: 'Forces & Motion', d: "Newton's laws, velocity-time graphs, momentum and energy conservation.", p: '15', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/1-Motion-Forces-and-Energy/Summary%20Notes%20-%20Topic%201%20CAIE%20Physics%20IGCSE.pdf' },
+        { t: 'Thermal Physics', d: 'Kinetic model, specific heat capacity, conduction, convection and radiation.', p: '12', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/2-Thermal-Physics/Summary%20Notes%20-%20Topic%202%20CAIE%20Physics%20IGCSE.pdf' },
+        { t: 'Waves', d: 'Transverse and longitudinal waves, reflection, refraction and the EM spectrum.', p: '13', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/3-Waves/Summary%20Notes%20-%20Topic%203%20CAIE%20Physics%20IGCSE.pdf' },
+        { t: 'Electricity & Magnetism', d: "Ohm's Law, series/parallel circuits, magnetic fields and induction.", p: '13', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/4-Electricity-and-Magnetism/Summary%20Notes%20-%20Topic%204%20CAIE%20Physics%20IGCSE.pdf' },
+        { t: 'Nuclear Physics', d: 'Radioactivity, alpha/beta/gamma, half-life, fission and fusion.', p: '11', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/5-Nuclear-Physics/Summary%20Notes%20-%20Topic%205%20CAIE%20Physics%20IGCSE.pdf' },
+        { t: 'Space Physics', d: 'Solar system, stellar evolution, orbital motion and the Big Bang.', p: '9', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/6-Space-Physics/Summary%20Notes%20-%20Topic%206%20CAIE%20Physics%20IGCSE.pdf' }
+      ]
+    };
 
-<script>
-const RES_DATA = {
-  chem: [
-    { t: 'States of Matter',       d: 'Kinetic particle theory, changes of state, diffusion and gas laws.',            p: '8',  url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/1-States-of-Matter/Summary%20Notes%20-%20Topic%201%20States%20of%20Matter%20-%20CAIE%20Chemistry%20IGCSE.pdf' },
-    { t: 'Atomic Structure',        d: 'Protons, neutrons, electrons, isotopes and the Periodic Table.',                p: '12', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/2-Atoms-Elements-and-Compounds/Detailed/2.2%20Atomic%20structure%20and%20the%20Periodic%20Table%20.pdf' },
-    { t: 'Stoichiometry',           d: 'Chemical equations, mole concept, empirical formulae and yield.',              p: '10', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/3-Stoichiometry/Summary%20Notes%20-%20Topic%203%20Stoichiometry%20-%20CAIE%20Chemistry%20IGCSE.pdf' },
-    { t: 'Organic Chemistry',       d: 'Alkanes, Alkenes, Alcohols, carboxylic acids and polymerisation.',             p: '16', url: 'https://henniscience.weebly.com/uploads/1/2/0/8/12088969/c14_organic_chemistry.pdf' },
-    { t: 'Chemical Energetics',     d: 'Exothermic and endothermic reactions, bond energies and activation energy.',   p: '9',  url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/6-Chemical-Energetics/Summary%20Notes%20-%20Topic%206%20Chemical%20Energetics%20-%20CAIE%20Chemistry%20IGCSE.pdf' },
-    { t: 'Acids, Bases & Salts',    d: 'pH scale, reactions of acids, neutralisation and preparation of salts.',       p: '11', url: 'https://pmt.physicsandmathstutor.com/download/Chemistry/GCSE/Notes/CIE-IGCSE/8-Acids-and-Bases/Summary%20Notes%20-%20Topic%208%20Acids%20and%20Bases%20-%20CAIE%20Chemistry%20IGCSE.pdf' }
-  ],
-  bio: [
-    { t: 'Characteristics of Life', d: 'MRS GREN life processes, classification and binomial nomenclature.',          p: '7',  url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/1-Characteristics-and-Classification-of-Living-Organisms/Summary%20Notes%20-%20Topic%201%20Characteristics%20and%20Classification%20-%20CAIE%20Biology%20IGCSE.pdf' },
-    { t: 'Cells & Organisation',    d: 'Plant vs animal cells, prokaryotes, specialised cells and organisation.',      p: '10', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/2-Organisation-of-the-Organism/Summary%20Notes%20-%20Topic%202%20Organisation%20of%20the%20Organism%20-%20CAIE%20Biology%20IGCSE.pdf' },
-    { t: 'Biological Molecules',    d: 'Carbohydrates, proteins, lipids, food tests and DNA base pairing.',           p: '14', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/4-Biological-Molecules/Summary%20Notes%20-%20Topic%204%20Biological%20Molecules%20-%20CAIE%20Biology%20IGCSE.pdf' },
-    { t: 'Nutrition & Digestion',   d: 'Nutrients, digestive system, enzyme action and photosynthesis.',               p: '14', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/5-Nutrition/Summary%20Notes%20-%20Topic%205%20Nutrition%20-%20CAIE%20Biology%20IGCSE.pdf' },
-    { t: 'Respiration',             d: 'Aerobic and anaerobic respiration, gas exchange and breathing.',               p: '9',  url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/12-Respiration/Summary%20Notes%20-%20Topic%2012%20Respiration%20-%20CAIE%20Biology%20IGCSE.pdf' },
-    { t: 'Reproduction & Genetics', d: 'Mitosis, meiosis, Mendelian genetics, mutations and natural selection.',       p: '16', url: 'https://pmt.physicsandmathstutor.com/download/Biology/GCSE/Notes/CIE-IGCSE/18-Inheritance/Summary%20Notes%20-%20Topic%2018%20Inheritance%20-%20CAIE%20Biology%20IGCSE.pdf' }
-  ],
-  phys: [
-    { t: 'Forces & Motion',         d: "Newton's laws, velocity-time graphs, momentum and energy conservation.",       p: '15', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/1-Motion-Forces-and-Energy/Summary%20Notes%20-%20Topic%201%20CAIE%20Physics%20IGCSE.pdf' },
-    { t: 'Thermal Physics',         d: 'Kinetic model, specific heat capacity, conduction, convection and radiation.',  p: '12', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/2-Thermal-Physics/Summary%20Notes%20-%20Topic%202%20CAIE%20Physics%20IGCSE.pdf' },
-    { t: 'Waves',                   d: 'Transverse and longitudinal waves, reflection, refraction and the EM spectrum.', p: '13', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/3-Waves/Summary%20Notes%20-%20Topic%203%20CAIE%20Physics%20IGCSE.pdf' },
-    { t: 'Electricity & Magnetism', d: "Ohm's Law, series/parallel circuits, magnetic fields and induction.",          p: '13', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/4-Electricity-and-Magnetism/Summary%20Notes%20-%20Topic%204%20CAIE%20Physics%20IGCSE.pdf' },
-    { t: 'Nuclear Physics',         d: 'Radioactivity, alpha/beta/gamma, half-life, fission and fusion.',              p: '11', url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/5-Nuclear-Physics/Summary%20Notes%20-%20Topic%205%20CAIE%20Physics%20IGCSE.pdf' },
-    { t: 'Space Physics',           d: 'Solar system, stellar evolution, orbital motion and the Big Bang.',             p: '9',  url: 'https://pmt.physicsandmathstutor.com/download/Physics/GCSE/Notes/CIE-IGCSE/6-Space-Physics/Summary%20Notes%20-%20Topic%206%20CAIE%20Physics%20IGCSE.pdf' }
-  ]
-};
+    const THEMES = {
+      chem: { color: 'var(--chem)', icon: 'fa-flask', btn: 'bd-chem' },
+      bio: { color: 'var(--bio)', icon: 'fa-dna', btn: 'bd-bio' },
+      phys: { color: 'var(--phys)', icon: 'fa-atom', btn: 'bd-phys' }
+    };
 
-const THEMES = {
-  chem: {color: 'var(--chem)', icon: 'fa-flask', btn: 'bd-chem'},
-  bio: {color: 'var(--bio)', icon: 'fa-dna', btn: 'bd-bio'},
-  phys: {color: 'var(--phys)', icon: 'fa-atom', btn: 'bd-phys'}
-};
-
-function renderResources() {
-  for (const [subject, list] of Object.entries(RES_DATA)) {
-    const grid = document.getElementById(`${subject}-res-grid`);
-    grid.innerHTML = list.map(item => `
+    function renderResources() {
+      for (const [subject, list] of Object.entries(RES_DATA)) {
+        const grid = document.getElementById(`${subject}-res-grid`);
+        grid.innerHTML = list.map(item => `
       <div class="col-md-4">
         <article class="res-card">
           <div class="rc-icon" style="background:${THEMES[subject].color}">
@@ -214,51 +463,52 @@ function renderResources() {
         </article>
       </div>
     `).join('');
-  }
-}
+      }
+    }
 
-/**
- * Downloads the PDF file linked from the resource card.
- * The <a> tag in the card already carries href, download, and type attributes.
- * This helper is kept only for the toast notification (called via onclick).
- */
+    /**
+     * Downloads the PDF file linked from the resource card.
+     * The <a> tag in the card already carries href, download, and type attributes.
+     * This helper is kept only for the toast notification (called via onclick).
+     */
 
-function showToast(msg) {
-  const t = document.getElementById('dl-toast');
-  document.getElementById('dl-toast-msg').innerText = msg;
-  t.style.display = 'flex';
-  setTimeout(() => t.style.display = 'none', 3000);
-}
+    function showToast(msg) {
+      const t = document.getElementById('dl-toast');
+      document.getElementById('dl-toast-msg').innerText = msg;
+      t.style.display = 'flex';
+      setTimeout(() => t.style.display = 'none', 3000);
+    }
 
-function filterRes(subj, btn) {
-  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.res-section').forEach(sec => {
-    sec.style.display = (subj === 'all' || sec.dataset.subject === subj) ? 'block' : 'none';
-  });
-}
+    function filterRes(subj, btn) {
+      document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.res-section').forEach(sec => {
+        sec.style.display = (subj === 'all' || sec.dataset.subject === subj) ? 'block' : 'none';
+      });
+    }
 
-renderResources();
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<script>
-  /* ─── Auth session helpers (shared across pages) ─── */
-  function getSession()  { try { return JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch(e) { return null; } }
-  function clearSession(){ localStorage.removeItem('sb_session'); }
+    renderResources();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* ─── Auth session helpers (shared across pages) ─── */
+    function getSession() { try { return JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch (e) { return null; } }
+    function clearSession() { localStorage.removeItem('sb_session'); }
 
-  function updateNav() {
-    const session = getSession();
-    const btn     = document.getElementById('auth-btn');
-    if (!session || !btn) return;
-    btn.innerHTML = '<i class="fa fa-user-check me-1" aria-hidden="true"></i>' + session.name.split(' ')[0];
-    btn.removeAttribute('data-bs-toggle');
-    btn.removeAttribute('data-bs-target');
-    btn.onclick = function () {
-      if (confirm('Log out of SciBrilliance?')) { clearSession(); location.reload(); }
-    };
-  }
+    function updateNav() {
+      const session = getSession();
+      const btn = document.getElementById('auth-btn');
+      if (!session || !btn) return;
+      btn.innerHTML = '<i class="fa fa-user-check me-1" aria-hidden="true"></i>' + session.name.split(' ')[0];
+      btn.removeAttribute('data-bs-toggle');
+      btn.removeAttribute('data-bs-target');
+      btn.onclick = function () {
+        if (confirm('Log out of SciBrilliance?')) { clearSession(); location.reload(); }
+      };
+    }
 
-  updateNav();
-</script>
+    updateNav();
+  </script>
 </body>
+
 </html>
