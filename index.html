@@ -226,8 +226,8 @@
           </div>
           <div class="banner-stats" role="list" aria-label="Platform statistics">
             <div class="bstat" role="listitem"><div class="n">3</div><div class="l">IGCSE Subjects</div></div>
-            <div class="bstat" role="listitem"><div class="n">10+</div><div class="l">Topics Covered</div></div>
-            <div class="bstat" role="listitem"><div class="n">5+</div><div class="l">Practice Questions</div></div>
+            <div class="bstat" role="listitem"><div class="n">120+</div><div class="l">Topics Covered</div></div>
+            <div class="bstat" role="listitem"><div class="n">500+</div><div class="l">Practice Questions</div></div>
           </div>
         </div>
 
@@ -681,87 +681,6 @@
 
 <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<script>
-  /* ─── localStorage helpers ─── */
-  function getUsers()    { try { return JSON.parse(localStorage.getItem('sb_users')   || '[]');   } catch(e) { return [];   } }
-  function saveUsers(u)  { localStorage.setItem('sb_users',   JSON.stringify(u)); }
-  function getSession()  { try { return JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch(e) { return null; } }
-  function setSession(u) { localStorage.setItem('sb_session', JSON.stringify(u)); }
-  function clearSession(){ localStorage.removeItem('sb_session'); }
-
-  /* ─── Tab switcher ─── */
-  function showTab(t) {
-    const isLogin = (t === 'login');
-    document.getElementById('panel-login').classList.toggle('d-none', !isLogin);
-    document.getElementById('panel-register').classList.toggle('d-none',  isLogin);
-    document.getElementById('tab-login-btn').className = isLogin  ? 'btn-mpri btn' : 'btn-msec btn';
-    document.getElementById('tab-reg-btn').className   = !isLogin ? 'btn-mpri btn' : 'btn-msec btn';
-    document.getElementById('tab-login-btn').setAttribute('aria-selected', isLogin  ? 'true' : 'false');
-    document.getElementById('tab-reg-btn').setAttribute('aria-selected',   !isLogin ? 'true' : 'false');
-  }
-
-  /* ─── Inline error helpers ─── */
-  function showErr(id, msg) {
-    const el = document.getElementById(id);
-    el.textContent = msg;
-    el.classList.remove('d-none');
-  }
-  function hideErr(id) { document.getElementById(id).classList.add('d-none'); }
-
-  /* ─── Login ─── */
-  function doLogin() {
-    hideErr('login-err');
-    const email = document.getElementById('l-email').value.trim();
-    const pass  = document.getElementById('l-pass').value;
-    if (!email || !pass) { showErr('login-err', 'Please fill in all fields.'); return; }
-    const user = getUsers().find(u => u.email === email && u.password === pass);
-    if (!user) {
-      showErr('login-err', 'Incorrect email or password. Please check your details or register a new account.');
-      return;
-    }
-    setSession({ name: user.name, email: user.email });
-    location.reload();
-  }
-
-  /* ─── Register ─── */
-  function doRegister() {
-    hideErr('reg-err');
-    const name  = document.getElementById('r-name').value.trim();
-    const email = document.getElementById('r-email').value.trim();
-    const pass  = document.getElementById('r-pass').value;
-    const pass2 = document.getElementById('r-pass2').value;
-    if (!name || !email || !pass || !pass2) { showErr('reg-err', 'Please fill in all fields.'); return; }
-    if (pass.length < 6)  { showErr('reg-err', 'Password must be at least 6 characters.'); return; }
-    if (pass !== pass2)   { showErr('reg-err', 'Passwords do not match.'); return; }
-    const users = getUsers();
-    if (users.find(u => u.email === email)) {
-      showErr('reg-err', 'An account with that email already exists. Please log in.');
-      return;
-    }
-    users.push({
-      name, email, password: pass,
-      progress: { chemistry: 0, biology: 0, physics: 0 },
-      quizScores: [], completedTopics: {}, downloads: [], feedback: []
-    });
-    saveUsers(users);
-    setSession({ name, email });
-    location.reload();
-  }
-
-  /* ─── Update navbar when logged in ─── */
-  function updateNav() {
-    const session = getSession();
-    const btn     = document.getElementById('auth-btn');
-    if (!session || !btn) return;
-    btn.innerHTML = '<i class="fa fa-user-check me-1" aria-hidden="true"></i>' + session.name.split(' ')[0];
-    btn.removeAttribute('data-bs-toggle');
-    btn.removeAttribute('data-bs-target');
-    btn.onclick = function () {
-      if (confirm('Log out of SciBrilliance?')) { clearSession(); location.reload(); }
-    };
-  }
-
-  updateNav();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
