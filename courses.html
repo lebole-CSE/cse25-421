@@ -82,7 +82,7 @@
         <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
         <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
         <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
-         <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a><li>
+        <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
         <li class="nav-item ms-lg-3"><button class="nav-link btn-login-nav"><i class="fa fa-user me-1"></i>Log In</button></li>
       </ul>
     </div>
@@ -480,24 +480,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-<script>
-  /* ─── Auth session helpers (shared across pages) ─── */
-  function getSession()  { try { return JSON.parse(localStorage.getItem('sb_session') || 'null'); } catch(e) { return null; } }
-  function clearSession(){ localStorage.removeItem('sb_session'); }
-
-  function updateNav() {
-    const session = getSession();
-    const btn     = document.querySelector('.btn-login-nav');
-    if (!session || !btn) return;
-    btn.innerHTML = '<i class="fa fa-user-check me-1" aria-hidden="true"></i>' + session.name.split(' ')[0];
-    btn.removeAttribute('data-bs-toggle');
-    btn.removeAttribute('data-bs-target');
-    btn.onclick = function () {
-      if (confirm('Log out of SciBrilliance?')) { clearSession(); location.reload(); }
-    };
-  }
-
-  updateNav();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
